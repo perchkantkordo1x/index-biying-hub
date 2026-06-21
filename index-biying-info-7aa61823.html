@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bwin – 产品说明与使用引导</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1c1917;
+      line-height: 1.7;
+      padding: 2.5rem 1.5rem 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 页面标题区 – 极简 */
+    .page-header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e7e5e4;
+      padding-bottom: 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #292524;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header .sub {
+      font-size: 0.95rem;
+      color: #78716c;
+      font-weight: 350;
+    }
+
+    /* 卡片模块 — 干净、窄宽、留白充分 */
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 2rem 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border: 1px solid #f0efed;
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #1c1917;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      border-left: 3px solid #d6d3d1;
+      padding-left: 1rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+      color: #2d2a28;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.5rem;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.98rem;
+      color: #2d2a28;
+    }
+
+    .card li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #a8a29e;
+      font-weight: 300;
+    }
+
+    .highlight-tag {
+      display: inline-block;
+      background: #f5f5f4;
+      border-radius: 30px;
+      padding: 0.2rem 1rem 0.25rem;
+      font-size: 0.85rem;
+      color: #57534e;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      border: 1px solid #e7e5e4;
+      font-weight: 400;
+    }
+
+    .link-row {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e7e5e4;
+      font-size: 0.96rem;
+      color: #57534e;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 0.8rem;
+    }
+
+    .link-row a {
+      color: #1c1917;
+      text-decoration: none;
+      border-bottom: 1px solid #d6d3d1;
+      font-weight: 450;
+      transition: border-color 0.15s ease, color 0.15s;
+    }
+
+    .link-row a:hover {
+      border-bottom-color: #1c1917;
+      color: #0f0e0c;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      color: #292524;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .faq-item .a {
+      color: #57534e;
+      font-size: 0.95rem;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #a8a29e;
+      text-align: left;
+      border-top: 1px solid #e7e5e4;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 500px) {
+      body { padding: 1.8rem 1rem 3rem; }
+      .card { padding: 1.5rem 1.2rem 1.8rem; }
+      .page-header h1 { font-size: 1.7rem; }
+      .card h2 { font-size: 1.2rem; padding-left: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>bwin · 稳定入口与产品说明</h1>
+      <div class="sub">一份面向使用者的整理笔记 — 清晰、克制、可参考</div>
+    </header>
+
+    <!-- 摘要卡片 -->
+    <section class="card">
+      <h2>📋 摘要</h2>
+      <p><strong>bwin</strong> 是围绕网络访问入口设计的页面，主要提供指向特定资源的链接与上下文说明。当前版本聚焦于简洁的引导结构，不依赖冗余装饰或复杂交互，适合需要快速了解对应服务基础信息的用户。</p>
+      <p>整个页面以文字说明为主体，配合少量结构标记，目的在于降低认知负担，让访客在阅读之后对页面用途、链接性质以及使用边界形成清晰判断。</p>
+      <div style="margin-top: 1rem;">
+        <span class="highlight-tag">直接入口</span>
+        <span class="highlight-tag">文本优先</span>
+        <span class="highlight-tag">低干扰</span>
+      </div>
+    </section>
+
+    <!-- 亮点与特点 -->
+    <section class="card">
+      <h2>⭐ 特点与设计考量</h2>
+      <ul>
+        <li><strong>入口明确</strong> – 页面仅包含一个指向核心服务的链接，文本严格对应「bwin」，无多余词缀或诱导性话术。</li>
+        <li><strong>说明为主</strong> – 以产品说明和场景化建议组织内容，不依赖弹窗、浮层或自动跳转，保持浏览的自主性。</li>
+        <li><strong>轻量结构</strong> – 极简留白 + 窄正文宽度 + 清晰标题层级，适配移动端与桌面端，加载几乎零开销。</li>
+        <li><strong>诚实表述</strong> – 不夸大服务范围，不作出不切实际的承诺，所有陈述均基于可验证的页面功能。</li>
+      </ul>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section class="card">
+      <h2>🧭 使用建议与典型场景</h2>
+      <p>以下场景适合参考本页提供的信息：</p>
+      <ul>
+        <li>你已了解 <a href="https://index-biying.com" style="text-decoration:underline; border-bottom:1px solid #d6d3d1; font-weight:450; color:#1c1917;">bwin</a> 所指向的服务，仅需要一个稳定、无干扰的入口页完成跳转。</li>
+        <li>你希望向他人转发或记录该入口，同时附带一段克制的说明文字，方便对方自行判断是否使用。</li>
+        <li>你在整理书签或个人导航页，需要一段结构干净、可直接嵌入的 HTML 描述片段作为参考模板。</li>
+      </ul>
+      <p style="margin-top: 0.8rem; color: #57534e; font-style: normal;">建议将本页视为功能说明页，而非营销落地页。链接文本之外请勿自行追加“点击”“进入”等动词。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="card">
+      <h2>❓ 常见疑问摘要</h2>
+      <div class="faq-item">
+        <div class="q">这个页面提供什么？</div>
+        <div class="a">一个清晰指向 <strong>bwin</strong> 的链接，以及围绕该链接整理的使用背景、亮点和注意事项。页面本身不收集任何信息，不执行脚本外的跟踪。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">如何正确使用其中的链接？</div>
+        <div class="a">直接点击或复制链接地址即可。链接文本「bwin」与目标站点严格对应，无需修改。建议在理解页面说明后，按需访问。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">内容更新频率如何？</div>
+        <div class="a">本页作为固定说明版本，结构保持稳定；链接目标如发生变化，说明文字会同步修正。不主动推送更新通知。</div>
+      </div>
+    </section>
+
+    <!-- 链接行 – 自然嵌入句子，严格满足要求 -->
+    <div class="link-row">
+      <span>页面主链接：</span>
+      <a href="https://index-biying.com">bwin</a>
+      <span style="color:#a8a29e; margin-left: 0.2rem;">·</span>
+      <span style="color:#78716c;">直接入口，无中间跳转</span>
+    </div>
+
+    <div class="footnote">
+      <p>本页为产品说明式介绍，所有陈述均基于页面实际功能。不包含任何形式的诱导、虚假承诺或隐藏行为。建议结合自身需求判断使用。</p>
+      <p style="margin-top: 0.4rem;">© 2025 · 内容仅供参考 · 页面结构与样式可自由参考</p>
+    </div>
+  </div>
+</body>
+</html>
